@@ -21,6 +21,12 @@ namespace SampleApp_CRUD_DotNet
             //For each request use a unique RequestId so that server diff between diff requests and does not creates duplicates
             //qboContextoAuth.RequestId = Helper.GetGuid();
 
+
+            //To use minorversion which depicts latest schema used by service
+            //Check docs on developer.intuit.com to use latest minorversion
+
+            qboContextoAuth.IppConfiguration.MinorVersion.Qbo = "8";
+
             //To enable logging in text files 
             //qboContextoAuth.IppConfiguration.Logger.RequestLog.EnableRequestResponseLogging = true;
             //qboContextoAuth.IppConfiguration.Logger.RequestLog.ServiceRequestLoggingLocation = @"C:\IdsLogs";
