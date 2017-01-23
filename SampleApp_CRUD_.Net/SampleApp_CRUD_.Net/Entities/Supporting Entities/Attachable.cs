@@ -35,13 +35,14 @@ namespace SampleApp_CRUD_DotNet
         {
            
 
-            string imagePath = string.Concat(AppDomain.CurrentDomain.BaseDirectory, "\\", "Resource\\image.jpeg");
+            string imagePath = string.Concat(AppDomain.CurrentDomain.BaseDirectory, "\\", "Resource\\invoice.pdf");
             
             System.IO.FileInfo file = new System.IO.FileInfo(imagePath);
             Attachable attachable = QBOHelper.CreateAttachableUpload(qboContextoAuth);
             using (System.IO.FileStream fs = file.OpenRead())
             {
-                attachable.ContentType = "image/jpeg";
+                //attachable.ContentType = "image/jpeg";
+                attachable.ContentType = "application/pdf";
                 attachable.FileName = file.Name;
                 attachable = Helper.Upload(qboContextoAuth, attachable, fs);
             }
@@ -54,6 +55,14 @@ namespace SampleApp_CRUD_DotNet
                     uploadedByte = binaryReader.ReadBytes((int)fs.Length);
                 }
             }
+            //To read online file
+            //using (MemoryStream fs1 = new MemoryStream())
+            //{
+            //    using (BinaryReader binaryReader = new BinaryReader(fs1))
+            //    {
+            //        uploadedByte = binaryReader.ReadBytes((int)fs1.Length);
+            //    }
+            //}
 
             //Dowload Attachment
             byte[] responseByte = Helper.Download(qboContextoAuth, attachable);

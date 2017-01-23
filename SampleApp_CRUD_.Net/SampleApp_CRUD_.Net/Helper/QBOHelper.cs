@@ -1999,20 +1999,20 @@ namespace SampleApp_CRUD_DotNet
             attachable.Long = "-21.3253249834";
             attachable.PlaceName = "Fake Place";
             attachable.Note = "Attachable note " + Helper.GetGuid().Substring(0, 5); 
-            attachable.Tag = "Attachable tag " + Helper.GetGuid().Substring(0, 5); 
+            attachable.Tag = "Attachable tag " + Helper.GetGuid().Substring(0, 5);
 
             //For attaching to Invoice or Bill or any Txn entity, Uncomment and replace the Id and type of the Txn in below code
-            //AttachableRef[] attachments = new AttachableRef[1];
-            //AttachableRef ar = new AttachableRef();
-            //ar.EntityRef = new ReferenceType();
-            //ar.EntityRef.type = objectNameEnumType.Invoice.ToString();
-            //ar.EntityRef.name = objectNameEnumType.Invoice.ToString();
-            //ar.EntityRef.Value = "1655";
+            AttachableRef[] attachments = new AttachableRef[1];
+            AttachableRef ar = new AttachableRef();
+            ar.EntityRef = new ReferenceType();
+            ar.EntityRef.type = objectNameEnumType.Invoice.ToString();
+            ar.EntityRef.name = objectNameEnumType.Invoice.ToString();
+            ar.EntityRef.Value = "3535"; //Add the Id of your invoice here
             ////ar.EntityRef.type = objectNameEnumType.Bill.ToString();
             ////ar.EntityRef.name = objectNameEnumType.Bill.ToString();
             ////ar.EntityRef.Value = "1484";
-            //attachments[0] = ar;
-            //attachable.AttachableRef = attachments;
+            attachments[0] = ar;
+            attachable.AttachableRef = attachments;
 
             return attachable;
         }

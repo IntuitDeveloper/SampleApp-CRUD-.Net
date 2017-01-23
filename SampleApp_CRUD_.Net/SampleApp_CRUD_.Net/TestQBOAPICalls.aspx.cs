@@ -103,7 +103,7 @@ namespace SampleApp_CRUD_DotNet
 
 
 
-            #endregion
+#endregion
 
             #region budget tests
 
@@ -725,7 +725,7 @@ namespace SampleApp_CRUD_DotNet
             #endregion
 
 
-            #endregion
+#endregion
 
             #region Transaction entities sample tests
 

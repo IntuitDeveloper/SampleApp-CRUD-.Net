@@ -160,14 +160,7 @@ namespace SampleApp_CRUD_DotNet
                     batch.Add(entry.Value as string, "Query" + typeof(T).Name);
             }
 
-            if (context.ServiceType == IntuitServicesType.QBD)
-            {
-                //batch.Add(new CDCQuery() { ChangedSince = DateTime.Now.AddDays(-100), ChangedSinceSpecified = true, Entities = typeof(T).Name }, "CDC" + typeof(T).Name);
-            }
-            else
-            {
-                //batch.Add(new CDCQuery() { ChangedSince = DateTime.Today.AddDays(-100), ChangedSinceSpecified = true, Entities = typeof(T).Name }, "CDC" + typeof(T).Name);
-            }
+         
 
             batch.Execute();
 
@@ -573,7 +566,7 @@ namespace SampleApp_CRUD_DotNet
 
             foreach (Type type in types)
             {
-                if ((context.ServiceType == IntuitServicesType.QBO && type.Name == "QBOHelper") || (context.ServiceType == IntuitServicesType.QBD && type.Name == "QBDHelper"))
+                if (context.ServiceType == IntuitServicesType.QBO && type.Name == "QBOHelper")
                 {
                     String methodName = "Create" + entity.GetType().Name;
                     MethodInfo method = type.GetMethod("Create" + entity.GetType().Name, bindingFlags);
@@ -582,7 +575,7 @@ namespace SampleApp_CRUD_DotNet
                     return returnEntity;
                 }
             }
-            throw new System.ApplicationException("Could not find QBOHelper or QBDHelper");
+            throw new System.ApplicationException("Could not find QBOHelper");
         }
 
         internal static Account FindOrAddAccount(ServiceContext context, AccountTypeEnum accountType, AccountClassificationEnum classification)
@@ -647,10 +640,7 @@ namespace SampleApp_CRUD_DotNet
                         typeOfPurchase = createdPurchase;
                     }
                 }
-                else if (context.ServiceType == IntuitServicesType.QBD)
-                {
-                    typeOfPurchase = listOfPurchase[0];
-                }
+                
             }
 
             return typeOfPurchase;
@@ -685,10 +675,7 @@ namespace SampleApp_CRUD_DotNet
                         typeOfPayment = createdPurchase;
                     }
                 }
-                else if (context.ServiceType == IntuitServicesType.QBD)
-                {
-                    typeOfPayment = listOfPayment[0];
-                }
+                
             }
 
             return typeOfPayment;
