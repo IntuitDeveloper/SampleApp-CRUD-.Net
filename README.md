@@ -1,5 +1,5 @@
 # SampleApp-CRUD-.Net
-CRUD sample for V3 .Net SDK
+CRUD sample for V3 .Net SDK (This sample app has NO UI. Please run it in debug mode after enabling logging on Test class to understand how the api calls are made.)
 
 
 <p>Welcome to the Intuit Developer's .Net Sample App for CRUD operations.</p>
