@@ -6,12 +6,7 @@
     <members>
         <member name="T:Intuit.Ipp.Core.Configuration.BaseUrl">
             <summary>
-            Base Urls for QBO, QBD and IPS.
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Core.Configuration.BaseUrl.Qbd">
-            <summary>
-            Gets or sets the url for QuickBooks Desktop Rest Service.
+            Base Urls for QBO and IPS.
             </summary>
         </member>
         <member name="P:Intuit.Ipp.Core.Configuration.BaseUrl.Qbo">
@@ -101,12 +96,7 @@
         </member>
         <member name="T:Intuit.Ipp.Core.Configuration.MinorVersion">
             <summary>
-            minorVersion for QBO and QBD
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Core.Configuration.MinorVersion.Qbd">
-            <summary>
-            Gets or sets the minorVersion for QuickBooks Online Rest Service.
+            minorVersion for QBO
             </summary>
         </member>
         <member name="P:Intuit.Ipp.Core.Configuration.MinorVersion.Qbo">
@@ -191,12 +181,12 @@
         </member>
         <member name="P:Intuit.Ipp.Core.Configuration.IppConfiguration.Security">
             <summary>
-            Gets or sets the Security mechanism like OAuth, Cookie.
+            Gets or sets the Security mechanism like OAuth.
             </summary>
         </member>
         <member name="P:Intuit.Ipp.Core.Configuration.IppConfiguration.Message">
             <summary>
-            Gets or sets the Message settings like Compression, Serialiation.
+            Gets or sets the Message settings like Compression, Serialization.
             </summary>
         </member>
         <member name="P:Intuit.Ipp.Core.Configuration.IppConfiguration.RetryPolicy">
@@ -271,14 +261,6 @@
             </summary>
             <param name="serviceContext">The serivce context object.</param>
             <returns>Returns value which specifies the request response logging mechanism.</returns>
-        </member>
-        <member name="M:Intuit.Ipp.Core.CoreHelper.ValidateTicketSecurityScheme(System.String,System.String)">
-            <summary>
-            Validates the ticket and appToken and throws exception if any one of them are null or empty.
-            </summary>
-            <param name="appToken">The application token.</param>
-            <param name="ticket">The ticket value.</param>
-            <returns>Ticket Request Validator if there are no exception.</returns>
         </member>
         <member name="M:Intuit.Ipp.Core.CoreHelper.IsInvalidaExponentialRetryMode(System.Int32,System.TimeSpan,System.TimeSpan,System.TimeSpan)">
             <summary>
@@ -849,11 +831,6 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
-        <member name="P:Intuit.Ipp.Core.Properties.Resources.AppDbidParameterName">
-            <summary>
-              Looks up a localized string similar to appDbid.
-            </summary>
-        </member>
         <member name="P:Intuit.Ipp.Core.Properties.Resources.AppTokenParameterName">
             <summary>
               Looks up a localized string similar to appToken.
@@ -952,11 +929,6 @@
         <member name="P:Intuit.Ipp.Core.Properties.Resources.SerializationExceptionMessage">
             <summary>
               Looks up a localized string similar to The Deserialization to Quickbooks Online User failed..
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Core.Properties.Resources.TicketParameterName">
-            <summary>
-              Looks up a localized string similar to ticket.
             </summary>
         </member>
         <member name="P:Intuit.Ipp.Core.Properties.Resources.ValidDirectoryPathMessage">
@@ -1342,14 +1314,9 @@
             Content type: application/x-www-form-urlencoded.
             </summary>
         </member>
-        <member name="F:Intuit.Ipp.Core.CoreConstants.QBD_BASEURL">
-            <summary>
-            The Base Url for QBD.
-            </summary>
-        </member>
         <member name="F:Intuit.Ipp.Core.CoreConstants.IPS_BASEURL">
             <summary>
-            The Base Url for QBD.
+            The Base Url for IPS.
             </summary>
         </member>
         <member name="F:Intuit.Ipp.Core.CoreConstants.QBO_BASEURL">
@@ -1532,12 +1499,7 @@
         </member>
         <member name="T:Intuit.Ipp.Core.IntuitServicesType">
             <summary>
-            This Enumeration specifies which Intuit service to connect to. It is  Either QBO or QBD.
-            </summary>
-        </member>
-        <member name="F:Intuit.Ipp.Core.IntuitServicesType.QBD">
-            <summary>
-            QuickBooks Desktop Data through IDS.
+            This Enumeration specifies which Intuit service to connect to.
             </summary>
         </member>
         <member name="F:Intuit.Ipp.Core.IntuitServicesType.QBO">
@@ -1567,7 +1529,7 @@
         </member>
         <member name="F:Intuit.Ipp.Core.ServiceContext.serviceType">
             <summary>
-            Intuit Service Type(QBO/QB).
+            Intuit Service Type(QBO).
             </summary>
         </member>
         <member name="F:Intuit.Ipp.Core.ServiceContext.baseserviceURL">
@@ -1575,19 +1537,9 @@
             Base Uri for IDS Service Call.
             </summary>
         </member>
-        <member name="F:Intuit.Ipp.Core.ServiceContext.appDbid">
-            <summary>
-            Application Database Id.
-            </summary>
-        </member>
         <member name="F:Intuit.Ipp.Core.ServiceContext.appToken">
             <summary>
             Application Token.
-            </summary>
-        </member>
-        <member name="F:Intuit.Ipp.Core.ServiceContext.ticket">
-            <summary>
-            The ticket
             </summary>
         </member>
         <member name="F:Intuit.Ipp.Core.ServiceContext.isCreateMethod">
@@ -1628,7 +1580,7 @@
             </summary>
             <param name="appToken">Application Token.</param>
             <param name="realmId">The realm id.</param>
-            <param name="serviceType">Service Type - QBO/QB.</param>
+            <param name="serviceType">Service Type - QBO.</param>
             <param name="requestValidator">The request validate.</param>
             <returns>Returns ServiceContext object.</returns>
             <exception cref="T:Intuit.Ipp.Exception.IdsException">If arguments are null or empty.</exception>
@@ -1639,76 +1591,6 @@
             <summary>
             Prevents a default instance of the <see cref="T:Intuit.Ipp.Core.ServiceContext"/> class from being created.
             </summary>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.#ctor(System.String,System.String,System.String)">
-            <summary>
-            Initializes a new instance of the ServiceContext class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="appDbid">Application Database Identifier.</param>
-            <param name="ticket">The Authenticated Ticket.</param>
-            <exception cref="T:Intuit.Ipp.Exception.IdsException">If arguments are null or empty.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidRealmException">If realm id is invalid.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidTokenException">If the token is invalid.</exception>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.#ctor(System.String,System.String,System.String,System.String)">
-            <summary>
-            Initializes a new instance of the ServiceContext class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="appDbid">Application Database Identifier.</param>
-            <param name="realmId">The Realm Id.</param>
-            <param name="ticket">The Authenticated Ticket.</param>
-            <exception cref="T:Intuit.Ipp.Exception.IdsException">If arguments are null or empty.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidRealmException">If realm id is invalid.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidTokenException">If the token is invalid.</exception>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.#ctor(System.String,System.String,Intuit.Ipp.Core.IntuitServicesType,System.String)">
-            <summary>
-            Initializes a new instance of the ServiceContext class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="appDbid">Application Database Identifier.</param>
-            <param name="serviceType">Service Type (QBO/QBD).</param>
-            <param name="ticket">The Authenticated Ticket.</param>
-            <exception cref="T:Intuit.Ipp.Exception.IdsException">If arguments are null or empty.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidRealmException">If realm id is invalid.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidTokenException">If the token is invalid.</exception>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.#ctor(System.String,System.String,System.String,Intuit.Ipp.Core.IntuitServicesType,System.String)">
-            <summary>
-            Initializes a new instance of the ServiceContext class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="appDbid">Application Database Identifier.</param>
-            <param name="realmId">The Realm Id.</param>
-            <param name="serviceType">Service Type (QBO/QBD).</param>
-            <param name="ticket">The Authenticated Ticket.</param>
-            <exception cref="T:Intuit.Ipp.Exception.IdsException">If arguments are null or empty.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidRealmException">If realm id is invalid.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidTokenException">If the token is invalid.</exception>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.#ctor(System.String,System.String,Intuit.Ipp.Security.IRequestValidator)">
-            <summary>
-            Initializes a new instance of the ServiceContext class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="appDbid">Application Database Identifier.</param>
-            <param name="requestValidator">The request validate.</param>
-            <exception cref="T:Intuit.Ipp.Exception.IdsException">If arguments are null or empty.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidRealmException">If realm id is invalid.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidTokenException">If the token is invalid.</exception>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.#ctor(System.String,System.String,System.String,Intuit.Ipp.Security.IRequestValidator)">
-            <summary>
-            Initializes a new instance of the ServiceContext class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="appDbid">Application Database Identifier.</param>
-            <param name="realmId">The Realm Id.</param>
-            <param name="requestValidator">The request validate.</param>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidRealmException">If realm id is invalid.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidTokenException">If the token is invalid.</exception>
         </member>
         <member name="P:Intuit.Ipp.Core.ServiceContext.IppConfiguration">
             <summary>
@@ -1728,16 +1610,6 @@
         <member name="P:Intuit.Ipp.Core.ServiceContext.AppToken">
             <summary>
             Gets or Sets the Application Token.
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Core.ServiceContext.Ticket">
-            <summary>
-            Gets the Ticket
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Core.ServiceContext.AppDbId">
-            <summary>
-            Gets the AppDbId
             </summary>
         </member>
         <member name="P:Intuit.Ipp.Core.ServiceContext.ServiceType">
@@ -1765,85 +1637,6 @@
             timeout param to be passed to services.  To setup the ReadWriteTimeout property in HttpWebRequest. 
             It is only for sync web requests. If not set, the default timeout will be used.
             </summary>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.Create(System.String,System.String,System.String)">
-            <summary>
-            Creates a new instance of ServiceContext class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="appDbid">Application Database Identifier.</param>
-            <param name="ticket">The Authenticated Ticket.</param>
-            <returns>Returns ServiceContext object.</returns>
-            <exception cref="T:Intuit.Ipp.Exception.IdsException">If arguments are null or empty.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidRealmException">If realm id is invalid.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidTokenException">If the token is invalid.</exception>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.Create(System.String,System.String,System.String,System.String)">
-            <summary>
-            Creates a new instance of ServiceContext class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="appDbid">Application Database Identifier.</param>
-            <param name="realmId">The Realm Id.</param>
-            <param name="ticket">The Authenticated Ticket.</param>
-            <returns>Returns ServiceContext object.</returns>
-            <exception cref="T:Intuit.Ipp.Exception.IdsException">If arguments are null or empty.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidRealmException">If realm id is invalid.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidTokenException">If the token is invalid.</exception>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.Create(System.String,System.String,Intuit.Ipp.Core.IntuitServicesType,System.String)">
-            <summary>
-            Creates a new instance of ServiceContext class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="appDbid">Application Database Identifier.</param>
-            <param name="serviceType">Service Type (QBO/QBD).</param>
-            <param name="ticket">The Authenticated Ticket.</param>
-            <returns>Returns ServiceContext object.</returns>
-            <exception cref="T:Intuit.Ipp.Exception.IdsException">If arguments are null or empty.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidRealmException">If realm id is invalid.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidTokenException">If the token is invalid.</exception>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.Create(System.String,System.String,System.String,Intuit.Ipp.Core.IntuitServicesType,System.String)">
-            <summary>
-            Creates a new instance of ServiceContext class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="appDbid">Application Database Identifier.</param>
-            <param name="realmId">The Realm Id.</param>
-            <param name="serviceType">Service Type (QBO/QBD).</param>
-            <param name="ticket">The Authenticated Ticket.</param>
-            <returns>
-            Returns ServiceContext object.
-            </returns>
-            <exception cref="T:Intuit.Ipp.Exception.IdsException">If arguments are null or empty.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidRealmException">If realm id is invalid.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidTokenException">If the token is invalid.</exception>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.Create(System.String,System.String,Intuit.Ipp.Security.IRequestValidator)">
-            <summary>
-            Creates a new instance of ServiceContext class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="appDbid">Application Database Identifier.</param>
-            <param name="requestValidator">The request validate.</param>
-            <returns>Returns ServiceContext object.</returns>
-            <exception cref="T:Intuit.Ipp.Exception.IdsException">If arguments are null or empty.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidRealmException">If realm id is invalid.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidTokenException">If the token is invalid.</exception>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.Create(System.String,System.String,System.String,Intuit.Ipp.Security.IRequestValidator)">
-            <summary>
-            Creates a new instance of ServiceContext class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="appDbid">Application Database Identifier.</param>
-            <param name="realmId">The Realm Id.</param>
-            <param name="requestValidator">The request validate.</param>
-            <returns>Returns ServiceContext object.</returns>
-            <exception cref="T:Intuit.Ipp.Exception.IdsException">If arguments are null or empty.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidRealmException">If realm id is invalid.</exception>
-            <exception cref="T:Intuit.Ipp.Exception.InvalidTokenException">If the token is invalid.</exception>
         </member>
         <member name="M:Intuit.Ipp.Core.ServiceContext.UseDataServices">
             <summary>
@@ -1873,50 +1666,9 @@
         </member>
         <member name="M:Intuit.Ipp.Core.ServiceContext.GetMinorVersion">
             <summary>
-            Gets the minorVersion for a QBO or QBD call
+            Gets the minorVersion for a QBO call
             </summary>
             <returns>Returns the minorVersion</returns>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.GetIsRealmQbo">
-            <summary>
-            Gets whether the service type is Qbo or not.
-            </summary>
-            <returns>Returns true if the service type is Qbo or else false.</returns>
-        </member>
-        <member name="M:Intuit.Ipp.Core.ServiceContext.GetIdsRealm">
-            <summary>
-            Gets the Ids Realm Id.
-            </summary>
-            <returns>Returns the realm id.</returns>
-        </member>
-        <member name="T:Intuit.Ipp.Core.TicketRequestValidator">
-            <summary>
-            Ticket Request Validate.
-            </summary>
-        </member>
-        <member name="F:Intuit.Ipp.Core.TicketRequestValidator.appToken">
-            <summary>
-            Application Token.
-            </summary>
-        </member>
-        <member name="F:Intuit.Ipp.Core.TicketRequestValidator.ticket">
-            <summary>
-            Authenticated Ticket Value.
-            </summary>
-        </member>
-        <member name="M:Intuit.Ipp.Core.TicketRequestValidator.#ctor(System.String,System.String)">
-            <summary>
-            Initializes a new instance of the TicketRequestValidator class.
-            </summary>
-            <param name="appToken">Application Token.</param>
-            <param name="ticket">Authenticated Ticket Value.</param>
-        </member>
-        <member name="M:Intuit.Ipp.Core.TicketRequestValidator.Authorize(System.Net.WebRequest,System.String)">
-            <summary>
-            Authorizes the web request.
-            </summary>
-            <param name="webRequest">The webRequest.</param>
-            <param name="bodyIfFormEncodedParams">The body if form encoded parameters.</param>
         </member>
     </members>
 </doc>

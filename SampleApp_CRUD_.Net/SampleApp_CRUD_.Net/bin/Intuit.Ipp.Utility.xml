@@ -78,11 +78,6 @@
             Base url element.
             </summary>
         </member>
-        <member name="P:Intuit.Ipp.Utility.BaseUrlElement.Qbd">
-            <summary>
-            Gets Url for QuickBooks Desktop Rest Service.
-            </summary>
-        </member>
         <member name="P:Intuit.Ipp.Utility.BaseUrlElement.Qbo">
             <summary>
             Gets Url for QuickBooks Online Rest Service.
@@ -106,11 +101,6 @@
         <member name="T:Intuit.Ipp.Utility.MinorVersionElement">
             <summary>
             MinorVersion
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Utility.MinorVersionElement.Qbd">
-            <summary>
-            Gets minorVersion for QuickBooks Desktop Rest Service.
             </summary>
         </member>
         <member name="P:Intuit.Ipp.Utility.MinorVersionElement.Qbo">
@@ -478,11 +468,6 @@
             Gets the OAuth element.
             </summary>
         </member>
-        <member name="P:Intuit.Ipp.Utility.SecurityElement.Ticket">
-            <summary>
-            Gets the ticket element.
-            </summary>
-        </member>
         <member name="P:Intuit.Ipp.Utility.SecurityElement.CustomSecurity">
             <summary>
             Gets the custom security element.
@@ -501,11 +486,6 @@
         <member name="F:Intuit.Ipp.Utility.SecurityMode.OAuth">
             <summary>
             Open Authentication security mode.
-            </summary>
-        </member>
-        <member name="F:Intuit.Ipp.Utility.SecurityMode.Ticket">
-            <summary>
-            Ticket security mode.
             </summary>
         </member>
         <member name="F:Intuit.Ipp.Utility.SecurityMode.Custom">
@@ -551,16 +531,6 @@
         <member name="P:Intuit.Ipp.Utility.ServiceElement.MinorVersion">
             <summary>
             Gets the MinorVersion Element.
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.Utility.TicketElement">
-            <summary>
-            Ticket element.
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Utility.TicketElement.Ticket">
-            <summary>
-            Gets the ticket value.
             </summary>
         </member>
         <member name="T:Intuit.Ipp.Utility.WebhooksVerifierElement">
@@ -696,6 +666,53 @@
             <summary>
             JSON.Net extention for handling Json serialization/deserialization of POCO classes generated for Intuit XSD.
             </summary>
+        </member>
+        <member name="M:Intuit.Ipp.Utility.IntuitConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            WriteJson
+            </summary>  
+            <param name="writer">json writer</param>
+            <param name="value">object value</param>
+            <param name="serializer">json serilaizer value</param>
+            <returns>void</returns>
+        </member>
+        <member name="M:Intuit.Ipp.Utility.IntuitConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            ReadJson
+            </summary>  
+            <param name="reader">json reader</param>
+            <param name="objectType">objectType value</param>
+            <param name="existingValue">existing value</param>
+            <param name="serliazer">serliazer value</param>
+            <returns>void</returns>
+        </member>
+        <member name="M:Intuit.Ipp.Utility.IntuitConverter.CanConvert(System.Type)">
+            <summary>
+            CanConvert
+            </summary>  
+            <param name="objecType">object Type value</param>
+            <returns>void</returns>
+        </member>
+        <member name="M:Intuit.Ipp.Utility.IntuitConverter.AssignValueToProperty(System.Object,Newtonsoft.Json.Linq.JProperty,System.Type,System.String,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            AssignValueToProperty
+            </summary>  
+            <param name="target">target value</param>
+            <param name="prop">prop value</param>
+            <param name="type">type value</param>
+            <param name="propName">propName value</param>
+            <param name="serializer">json serilaizer value</param>
+            <returns>void</returns>
+        </member>
+        <member name="M:Intuit.Ipp.Utility.IntuitConverter.ResizeArray(System.Array,System.Int32)">
+            <summary>
+            ResizeArray
+            </summary>  
+        </member>
+        <member name="M:Intuit.Ipp.Utility.IntuitConverter.GetInstanceofAbstractType(System.Type,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            GetInstanceofAbstarctType
+            </summary>  
         </member>
         <member name="T:Intuit.Ipp.Utility.JsonObjectSerializer">
             <summary>
