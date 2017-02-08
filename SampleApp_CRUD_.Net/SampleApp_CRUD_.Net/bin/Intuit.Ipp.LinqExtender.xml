@@ -4,6 +4,13 @@
         <name>Intuit.Ipp.LinqExtender</name>
     </assembly>
     <members>
+        <member name="T:Intuit.Ipp.LinqExtender.Abstraction.NamespaceDoc">
+            <summary>
+            Intuit.Ipp.DataService has public methods to call Intuit Data Services and 
+            The assembly has methods for all CRUD 
+            (Add, Update, FindById, FindAll and Delete) operations and also has features to query QBO entities.
+            </summary>
+        </member>
         <member name="T:Intuit.Ipp.LinqExtender.Abstraction.IBucket">
             <summary>
             Interfae defining Bucket object and its accesible proeprties.
@@ -263,6 +270,13 @@
         <member name="P:Intuit.Ipp.LinqExtender.Ast.BlockExpression.CodeType">
             <summary>
             Gets a value indicating the type of expression.
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.LinqExtender.Ast.NamespaceDoc">
+            <summary>
+            Intuit.Ipp.DataService has public methods to call Intuit Data Services and 
+            The assembly has methods for all CRUD 
+            (Add, Update, FindById, FindAll and Delete) operations and also has features to query QBO entities.
             </summary>
         </member>
         <member name="T:Intuit.Ipp.LinqExtender.Ast.LambdaExpression">
@@ -542,6 +556,39 @@
             Gets a value indicating the type of expression.
             </summary>
         </member>
+        <member name="T:Intuit.Ipp.LinqExtender.Attributes.NamespaceDoc">
+            <summary>
+            Intuit.Ipp.DataService has public methods to call Intuit Data Services and 
+            The assembly has methods for all CRUD 
+            (Add, Update, FindById, FindAll and Delete) operations and also has features to query QBO entities.
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.LinqExtender.Attributes.NameAttribute">
+            <summary>
+            Marks a class property or class with special name 
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.LinqExtender.Attributes.NameAttribute.#ctor(System.String)">
+            <summary>
+            Initalizes a new instance of the <see cref="T:Intuit.Ipp.LinqExtender.Attributes.NameAttribute"/> class.
+            </summary>
+            <param name="targetName">Name of the reflected object.</param>
+        </member>
+        <member name="P:Intuit.Ipp.LinqExtender.Attributes.NameAttribute.Name">
+            <summary>
+            maps to the name of the original enity name.
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.LinqExtender.Attributes.UniqueIdentifierAttribute">
+            <summary>
+             Defines a property to be unique.
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.LinqExtender.Attributes.IgnoreAttribute">
+            <summary>
+            Under this attribute present, property will be ignored by extender.
+            </summary>
+        </member>
         <member name="T:Intuit.Ipp.LinqExtender.CodeType">
             <summary>
             Defines Different types of code entries
@@ -590,32 +637,6 @@
         <member name="F:Intuit.Ipp.LinqExtender.CodeType.MethodCallExpression">
             <summary>
             MethodCall Expression
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.LinqExtender.Attributes.NameAttribute">
-            <summary>
-            Marks a class property or class with special name 
-            </summary>
-        </member>
-        <member name="M:Intuit.Ipp.LinqExtender.Attributes.NameAttribute.#ctor(System.String)">
-            <summary>
-            Initalizes a new instance of the <see cref="T:Intuit.Ipp.LinqExtender.Attributes.NameAttribute"/> class.
-            </summary>
-            <param name="targetName">Name of the reflected object.</param>
-        </member>
-        <member name="P:Intuit.Ipp.LinqExtender.Attributes.NameAttribute.Name">
-            <summary>
-            maps to the name of the original enity name.
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.LinqExtender.Attributes.UniqueIdentifierAttribute">
-            <summary>
-             Defines a property to be unique.
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.LinqExtender.Attributes.IgnoreAttribute">
-            <summary>
-            Under this attribute present, property will be ignored by extender.
             </summary>
         </member>
         <member name="T:Intuit.Ipp.LinqExtender.Bucket">
@@ -1012,6 +1033,13 @@
             <param name="value"></param>
             <returns></returns>
         </member>
+        <member name="T:Intuit.Ipp.LinqExtender.Collection.NamespaceDoc">
+            <summary>
+            Intuit.Ipp.DataService has public methods to call Intuit Data Services and 
+            The assembly has methods for all CRUD 
+            (Add, Update, FindById, FindAll and Delete) operations and also has features to query QBO entities.
+            </summary>
+        </member>
         <member name="T:Intuit.Ipp.LinqExtender.Collection.ReadOnlyQueryCollection`1">
             <summary>
             Contains projected read-only query objects.
@@ -1186,6 +1214,20 @@
             Sorts the collection with the provided comparer.
             </summary>
             <param name="comparer"></param>
+        </member>
+        <member name="T:Intuit.Ipp.LinqExtender.NamespaceDoc">
+            <summary>
+            Intuit.Ipp.DataService has public methods to call Intuit Data Services and 
+            The assembly has methods for all CRUD 
+            (Add, Update, FindById, FindAll and Delete) operations and also has features to query QBO entities.
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.LinqExtender.Fluent.NamespaceDoc">
+            <summary>
+            Intuit.Ipp.DataService has public methods to call Intuit Data Services and 
+            The assembly has methods for all CRUD 
+            (Add, Update, FindById, FindAll and Delete) operations and also has features to query QBO entities.
+            </summary>
         </member>
         <member name="M:Intuit.Ipp.LinqExtender.Fluent.FluentMethod.#ctor(Intuit.Ipp.LinqExtender.Abstraction.IBucket)">
             <summary>

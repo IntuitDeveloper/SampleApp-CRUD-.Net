@@ -401,7 +401,7 @@
         </member>
         <member name="T:Intuit.Ipp.ReportService.IdsResource">
             <summary>
-            A list of Domain entities supported by IDS QBD. Used by the REST infrastructure to construct relevant calls.
+            A list of Domain entities supported by IDS. Used by the REST infrastructure to construct relevant calls.
             </summary>
         </member>
         <member name="F:Intuit.Ipp.ReportService.IdsResource.user">
