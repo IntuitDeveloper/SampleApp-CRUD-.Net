@@ -587,7 +587,7 @@
         <member name="T:Intuit.Ipp.DataService.NamespaceDoc">
             <summary>
             Intuit.Ipp.DataService has public methods to call Intuit Data Services and 
-            Reporting Services. The assembly has methods for all CRUD 
+            The assembly has methods for all CRUD 
             (Add, Update, FindById, FindAll and Delete) operations and also has features to query QBO entities.
             </summary>
         </member>
@@ -643,7 +643,7 @@
         </member>
         <member name="T:Intuit.Ipp.DataService.IdsResource">
             <summary>
-            A list of Domain entities supported by IDS QBD. Used by the REST infrastructure to construct relevant calls.
+            A list of Domain entities supported by QBO. Used by the REST infrastructure to construct relevant calls.
             </summary>
         </member>
         <member name="F:Intuit.Ipp.DataService.IdsResource.user">
@@ -1006,7 +1006,7 @@
             <typeparam name="T">Generic Type T.</typeparam>
             <param name="entity">The entity for which the data is required.</param>
             <param name="pageNumber">The Page number to retrieve.</param>
-            <param name="pageSize">The number of record fetch in one call. Max size supported by QBO is 100 and QBD is 999.</param>
+            <param name="pageSize">The number of record fetch in one call. Max size supported by QBO is 1000.</param>
             <returns> Returns the list of entities.</returns>"
         </member>
         <member name="T:Intuit.Ipp.DataService.IntuitBatchResponse">
