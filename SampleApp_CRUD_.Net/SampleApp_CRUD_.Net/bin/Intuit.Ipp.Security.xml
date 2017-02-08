@@ -4,58 +4,6 @@
         <name>Intuit.Ipp.Security</name>
     </assembly>
     <members>
-        <member name="T:Intuit.Ipp.Security.CookieBasedRequestValidator">
-            <summary>
-            IAM Cookie implementation for Request validate contract.
-            </summary>
-        </member>
-        <member name="F:Intuit.Ipp.Security.CookieBasedRequestValidator.iamCookie">
-            <summary>
-            The qbn cookie string
-            </summary>
-        </member>
-        <member name="F:Intuit.Ipp.Security.CookieBasedRequestValidator.appToken">
-            <summary>
-            The Application Token
-            </summary>
-        </member>
-        <member name="M:Intuit.Ipp.Security.CookieBasedRequestValidator.#ctor(System.String,System.String)">
-            <summary>
-            Initializes a new instance of the CookieBasedRequestValidator class.
-            </summary>
-            <param name="iamCookie">The iam cookie.</param>
-            <param name="appToken">Application Token.</param>
-        </member>
-        <member name="M:Intuit.Ipp.Security.CookieBasedRequestValidator.#ctor(System.Web.HttpCookieCollection,System.String)">
-            <summary>
-            Initializes a new instance of the CookieBasedRequestValidator class.
-            </summary>
-            <param name="cookieCollection">The cookie collection.</param>
-            <param name="appToken">Application Token.</param>
-        </member>
-        <member name="P:Intuit.Ipp.Security.CookieBasedRequestValidator.AppToken">
-            <summary>
-            Gets or sets the The Application Token
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Security.CookieBasedRequestValidator.IamCookie">
-            <summary>
-            Gets the qbn cookie string
-            </summary>
-        </member>
-        <member name="M:Intuit.Ipp.Security.CookieBasedRequestValidator.Authorize(System.Net.WebRequest,System.String)">
-            <summary>
-            Authorizes the specified request.
-            </summary>
-            <param name="webRequest">The request.</param>
-            <param name="requestBody">The body if form encoded parameters.</param>
-        </member>
-        <member name="M:Intuit.Ipp.Security.CookieBasedRequestValidator.IamValidationTime">
-            <summary>
-             This method gives seconds since the Unix epoch
-            </summary>
-            <returns> Seconds since the Unix epoch</returns>
-        </member>
         <member name="T:Intuit.Ipp.Security.NamespaceDoc">
             <summary>
             Intuit.Ipp.Security consists of classes that are required to set security credentials to connect with 
@@ -194,11 +142,6 @@
         <member name="T:Intuit.Ipp.Security.SecurityConstants">
             <summary>
             Constants for security assembly.
-            </summary>
-        </member>
-        <member name="F:Intuit.Ipp.Security.SecurityConstants.QBNCOOKIEPREFIX">
-            <summary>
-            Qbn Cookie Prefix value.
             </summary>
         </member>
         <member name="F:Intuit.Ipp.Security.SecurityConstants.SEMICOLONSTRING">

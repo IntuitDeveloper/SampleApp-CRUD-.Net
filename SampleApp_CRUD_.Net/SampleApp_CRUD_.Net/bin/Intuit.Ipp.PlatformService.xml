@@ -54,9 +54,34 @@
             Set the reconnect URL.
             </summary>
         </member>
+        <member name="T:Intuit.Ipp.PlatformService.NamespaceDoc">
+            <summary>
+            Intuit.Ipp.PlatformService is used to call Platform Service APIs such as, GetUserInfo, GetRoleInfo, GetFreeSubscriptionList, GetPaidSubscriptionList, and so forth.
+            </summary>
+        </member>
         <member name="T:Intuit.Ipp.PlatformService.PlatformException">
             <summary>
             PlatformException class
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.PlatformService.PlatformException.ErrorCode">
+            <summary>
+            ErrorCode
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.PlatformService.PlatformException.ErrorMessage">
+            <summary>
+            ErrorMessage
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.PlatformService.PlatformException.ServerTime">
+            <summary>
+            ServerTime
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.PlatformService.PlatformException.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor
             </summary>
         </member>
         <member name="T:Intuit.Ipp.PlatformService.PlatformClient">
@@ -74,10 +99,43 @@
             Disconnect a user from QBO.
             </summary>
             <param name="consumerKey">OAuth consumerKey.</param>
-            <param name="consumerKey">OAuth consumerSecret.</param>
-            <param name="consumerKey">OAuth accessToken.</param>
-            <param name="consumerKey">OAuth accessTokenSecret.</param>
+            <param name="consumerSecret">OAuth consumerSecret.</param>
+            <param name="accessToken">OAuth accessToken.</param>
+            <param name="accessTokenSecret">OAuth accessTokenSecret.</param>
             <returns>void.</returns>
+        </member>
+        <member name="M:Intuit.Ipp.PlatformService.PlatformService.ParseDisconnectResponse(System.String)">
+            <summary>
+            Parse DisconnectResponse
+            </summary>
+            <param name="response">Disconnect Response string</param>        
+            <returns>void.</returns>
+        </member>
+        <member name="M:Intuit.Ipp.PlatformService.PlatformService.GetPlatformException(System.Xml.XmlDocument,System.Xml.XmlNamespaceManager)">
+            <summary>
+            GetPlatformException
+            </summary>  
+            <param name="xmldoc">xmldoc</param>  
+            <param name="nsmgr">nameSpaceManager</param>  
+            <returns>PlatformException</returns>
+        </member>
+        <member name="M:Intuit.Ipp.PlatformService.PlatformService.Reconnect(System.String,System.String,System.String,System.String)">
+            <summary>
+            Reconnect
+            </summary>  
+            <param name="xmldoc">xmldoc</param>  
+            <param name="nsmgr">nameSpaceManager</param>  
+            <returns>Dictionary</returns>
+        </member>
+        <member name="M:Intuit.Ipp.PlatformService.PlatformService.GetCurrentUser(System.String,System.String,System.String,System.String)">
+            <summary>
+            GetCurrentUser
+            </summary>  
+            <param name="consumerKey">OAuth consumerKey.</param>
+            <param name="consumerSecret">OAuth consumerSecret.</param>
+            <param name="accessToken">OAuth accessToken.</param>
+            <param name="accessTokenSecret">OAuth accessTokenSecret.</param>
+            <returns>Dictionary</returns>
         </member>
         <member name="T:Intuit.Ipp.PlatformService.Properties.Resources">
             <summary>
@@ -265,11 +323,6 @@
               Looks up a localized string similar to Must provide service provider id..
             </summary>
         </member>
-        <member name="P:Intuit.Ipp.PlatformService.Properties.Resources.MustProvideTargetUrl">
-            <summary>
-              Looks up a localized string similar to Must provide target url..
-            </summary>
-        </member>
         <member name="P:Intuit.Ipp.PlatformService.Properties.Resources.MustProvideUserId">
             <summary>
               Looks up a localized string similar to Must provide userId..
@@ -360,11 +413,6 @@
               Looks up a localized string similar to The Service context cannot be null..
             </summary>
         </member>
-        <member name="P:Intuit.Ipp.PlatformService.Properties.Resources.TicketParameterName">
-            <summary>
-              Looks up a localized string similar to ticket.
-            </summary>
-        </member>
         <member name="P:Intuit.Ipp.PlatformService.Properties.Resources.TrailSubscriptionNotRetuned">
             <summary>
               Looks up a localized string similar to List of trail application subscriptions not returned..
@@ -398,11 +446,6 @@
         <member name="P:Intuit.Ipp.PlatformService.User.IsVerified">
             <summary>
             IsVerified
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.PlatformServices.NamespaceDoc">
-            <summary>
-            Intuit.Ipp.PlatformService is used to call Platform Service APIs such as, GetUserInfo, GetRoleInfo, GetFreeSubscriptionList, GetPaidSubscriptionList, and so forth.
             </summary>
         </member>
     </members>

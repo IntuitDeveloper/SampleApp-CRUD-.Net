@@ -1287,11 +1287,6 @@
             TODO: Update summary.
             </summary>
         </member>
-        <member name="F:Intuit.Ipp.Exception.ValidationException.errorMessage">
-            <summary>
-            Error Message.
-            </summary>
-        </member>
         <member name="M:Intuit.Ipp.Exception.ValidationException.#ctor(System.Collections.Generic.IList{Intuit.Ipp.Exception.IdsError})">
             <summary>
             Initializes a new instance of the ValidationException class.
