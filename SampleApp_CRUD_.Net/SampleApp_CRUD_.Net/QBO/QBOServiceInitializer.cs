@@ -24,18 +24,14 @@ namespace SampleApp_CRUD_DotNet
 
         private static void Initialize()
         {
-            //accessToken = ConfigurationManager.AppSettings["accessToken"];
-            //accessTokenSecret = ConfigurationManager.AppSettings["accessTokenSecret"];
-            //consumerKey = ConfigurationManager.AppSettings["consumerKey"];
-            //consumerKeySecret = ConfigurationManager.AppSettings["consumerSecret"];
-            //realmId = ConfigurationManager.AppSettings["realmId"];
+            //Add keys in web.config
+            accessToken = ConfigurationManager.AppSettings["AccessToken"];
+            accessTokenSecret = ConfigurationManager.AppSettings["accessTokenSecret"];
+            consumerKey = ConfigurationManager.AppSettings["ConsumerKey"];
+            consumerSecret = ConfigurationManager.AppSettings["ConsumerSecret"];
+            realmId = ConfigurationManager.AppSettings["realmId"];
 
 
-            realmId = "123145693359857";
-            accessToken = "qyprdkFQEJ8luPuwyBumFhQAdmVEEi55Zgt52Em8Wyd4i7Bu";
-            accessTokenSecret = "6jBqLq5rEjNMB8Freu9L4Fk7TSOl3ifo62P8xJYb";
-            consumerKey = "qyprd68jMGebyWgiNFT411r4KnhmB9";
-            consumerSecret = "j2QGgFRv5yYMXB5lVXUI0NBPlHAmz0drjANG1KeX";
 
 
         }

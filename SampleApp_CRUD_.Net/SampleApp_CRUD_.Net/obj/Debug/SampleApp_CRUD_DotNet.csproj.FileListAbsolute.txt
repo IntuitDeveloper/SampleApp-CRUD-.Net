@@ -49,7 +49,6 @@ C:\Users\nshrivastava\Documents\GitHub\SampleApp-CRUD-.Net\SampleApp_CRUD_.Net\S
 C:\Users\nshrivastava\Documents\GitHub\SampleApp-CRUD-.Net\SampleApp_CRUD_.Net\SampleApp_CRUD_.Net\bin\Newtonsoft.Json.xml
 C:\Users\nshrivastava\Documents\GitHub\SampleApp-CRUD-.Net\SampleApp_CRUD_.Net\SampleApp_CRUD_.Net\obj\Debug\SampleApp_CRUD_.Net.dll
 C:\Users\nshrivastava\Documents\GitHub\SampleApp-CRUD-.Net\SampleApp_CRUD_.Net\SampleApp_CRUD_.Net\obj\Debug\SampleApp_CRUD_.Net.pdb
-C:\Users\nshrivastava\Documents\GitHub\SampleApp-CRUD-.Net\SampleApp_CRUD_.Net\SampleApp_CRUD_.Net\obj\Debug\SampleApp_CRUD_DotNet.csprojResolveAssemblyReference.cache
 D:\Projects\SampleApp-CRUD-.Net-Clone\SampleApp_CRUD_.Net\SampleApp_CRUD_.Net\bin\ApplicationInsights.config
 D:\Projects\SampleApp-CRUD-.Net-Clone\SampleApp_CRUD_.Net\SampleApp_CRUD_.Net\bin\SampleApp_CRUD_.Net.dll.config
 D:\Projects\SampleApp-CRUD-.Net-Clone\SampleApp_CRUD_.Net\SampleApp_CRUD_.Net\bin\SampleApp_CRUD_.Net.dll
