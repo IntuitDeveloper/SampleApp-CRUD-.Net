@@ -41,7 +41,7 @@ namespace SampleApp_CRUD_DotNet
             Initialize();
             OAuthRequestValidator reqValidator = new OAuthRequestValidator(accessToken, accessTokenSecret, consumerKey, consumerSecret);
             ServiceContext context = new ServiceContext(realmId, IntuitServicesType.QBO, reqValidator);
-
+            
             //MinorVersion represents the latest features/fields in the xsd supported by the QBO apis.
             //Read more details here- https://developer.intuit.com/docs/0100_quickbooks_online/0200_dev_guides/accounting/querying_data
 

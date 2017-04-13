@@ -129,3 +129,4 @@ C:\Users\nshrivastava\Documents\GitHub\SampleApp-CRUD-.Net\SampleApp_CRUD_.Net\S
 C:\Users\nshrivastava\Documents\GitHub\SampleApp-CRUD-.Net\SampleApp_CRUD_.Net\SampleApp_CRUD_.Net\bin\roslyn\System.IO.FileSystem.Primitives.dll
 C:\Users\nshrivastava\Documents\GitHub\SampleApp-CRUD-.Net\SampleApp_CRUD_.Net\SampleApp_CRUD_.Net\bin\roslyn\vbc.exe.config
 C:\Users\nshrivastava\Documents\GitHub\SampleApp-CRUD-.Net\SampleApp_CRUD_.Net\SampleApp_CRUD_.Net\bin\roslyn\vbc.rsp
+C:\Users\nshrivastava\Documents\GitHub\SampleApp-CRUD-.Net\SampleApp_CRUD_.Net\SampleApp_CRUD_.Net\obj\Debug\SampleApp_CRUD_DotNet.csprojResolveAssemblyReference.cache

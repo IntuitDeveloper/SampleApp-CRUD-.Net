@@ -25,6 +25,7 @@ namespace SampleApp_CRUD_DotNet
 
         internal static Invoice CreateInvoice(ServiceContext context)
         {
+            //US Invoice
             Customer customer = Helper.FindOrAdd<Customer>(context, new Customer());
             TaxCode taxCode = Helper.FindOrAdd<TaxCode>(context, new TaxCode());
             Account account = Helper.FindOrAddAccount(context, AccountTypeEnum.AccountsReceivable, AccountClassificationEnum.Liability);
@@ -43,9 +44,8 @@ namespace SampleApp_CRUD_DotNet
             invoice.DueDate = DateTime.UtcNow.Date;
             invoice.DueDateSpecified = true;
             
-            //invoice.GlobalTaxCalculation = GlobalTaxCalculationEnum.TaxExcluded;
-            //invoice.GlobalTaxCalculationSpecified = true;
-            invoice.TotalAmt = new Decimal(0.00);
+
+            invoice.TotalAmt = new Decimal(10.00);
             invoice.TotalAmtSpecified = true;
            
             invoice.ApplyTaxAfterDiscount = false;
@@ -78,13 +78,7 @@ namespace SampleApp_CRUD_DotNet
             invoice.BillEmailBcc = billEmailbcc;
 
 
-            invoice.ARAccountRef = new ReferenceType()
-            {
-                type = Enum.GetName(typeof(objectNameEnumType), objectNameEnumType.Account),
-                name = "Account Receivable",
-                Value = "QB:37"
-            };
-            invoice.Balance = new Decimal(0.00);
+            invoice.Balance = new Decimal(10.00);
             invoice.BalanceSpecified = true;
             
             invoice.TxnDate = DateTime.UtcNow.Date;
@@ -105,20 +99,142 @@ namespace SampleApp_CRUD_DotNet
 
             lineList.Add(line);
             invoice.Line = lineList.ToArray();
-            TxnTaxDetail txnTaxDetail = new TxnTaxDetail();
-            txnTaxDetail.DefaultTaxCodeRef = new ReferenceType()
+            invoice.TxnTaxDetail = new TxnTaxDetail()
             {
-                Value = taxCode.Id,
-                type = Enum.GetName(typeof(objectNameEnumType), objectNameEnumType.Customer),
-                name = taxCode.Name
+                TotalTax = Convert.ToDecimal(10),
+                TotalTaxSpecified = true
             };
-          
 
-            txnTaxDetail.TotalTax = new Decimal(0.00);
-            txnTaxDetail.TotalTaxSpecified = true;
+
 
             
             return invoice;
+
+
+
+            //Global invoice
+
+            //Customer customer = Helper.FindOrAdd<Customer>(context, new Customer());
+            //TaxCode taxCode = Helper.FindOrAdd<TaxCode>(context, new TaxCode());
+            //Account account = Helper.FindOrAddAccount(context, AccountTypeEnum.AccountsReceivable, AccountClassificationEnum.Liability);
+            //Item item = Helper.FindOrAddItem(context, ItemTypeEnum.Service);
+
+            //Invoice invoice = new Invoice();
+   
+            //invoice.AutoDocNumber = true;
+            //invoice.AutoDocNumberSpecified = true;
+
+            //invoice.CustomerRef = new ReferenceType()
+            //{
+            //    name = customer.DisplayName,
+            //    Value = customer.Id
+            //};
+
+            //invoice.DueDate = DateTime.UtcNow.Date;
+            //invoice.DueDateSpecified = true;
+
+            //invoice.TotalAmt = Convert.ToDecimal(20);
+            //invoice.TotalAmtSpecified = true;
+
+            //invoice.ApplyTaxAfterDiscount = false;
+            //invoice.ApplyTaxAfterDiscountSpecified = true;
+
+            //invoice.PrintStatus = PrintStatusEnum.NotSet;
+            //invoice.PrintStatusSpecified = true;
+            //invoice.EmailStatus = EmailStatusEnum.NotSet;
+            //invoice.EmailStatusSpecified = true;
+
+            //EmailAddress billEmail = new EmailAddress();
+            //billEmail.Address = @"abc@gmail.com";
+            //billEmail.Default = true;
+            //billEmail.DefaultSpecified = true;
+            //billEmail.Tag = "Tag";
+            //invoice.BillEmail = billEmail;
+
+            //EmailAddress billEmailcc = new EmailAddress();
+            //billEmailcc.Address = @"def@gmail.com";
+            //billEmailcc.Default = true;
+            //billEmailcc.DefaultSpecified = true;
+            //billEmailcc.Tag = "Tag";
+            //invoice.BillEmailCc = billEmailcc;
+
+            //EmailAddress billEmailbcc = new EmailAddress();
+            //billEmailbcc.Address = @"xyz@gmail.com";
+            //billEmailbcc.Default = true;
+            //billEmailbcc.DefaultSpecified = true;
+            //billEmailbcc.Tag = "Tag";
+            //invoice.BillEmailBcc = billEmailbcc;
+
+  
+            //invoice.Balance = Convert.ToDecimal(20);
+            //invoice.BalanceSpecified = true;
+            //invoice.TxnDate = DateTime.UtcNow.Date;
+            //invoice.TxnDateSpecified = true;
+
+            //invoice.CurrencyRef = new ReferenceType()
+            //{
+            //    Value = "GBP" //Currency of txn should be same as Customer's currency
+            //};
+            //invoice.ExchangeRate = 0.798467m;
+            //invoice.ExchangeRateSpecified = true;
+
+
+
+
+
+
+
+            //List<Line> lineList = new List<Line>();
+            //Line line = new Line();
+            //line.Id = "1";
+            //line.LineNum = "1";
+            //line.Description = "Priced Product";
+            //line.Amount = Convert.ToDecimal(10);
+            //line.AmountSpecified = true;
+            //line.DetailType = LineDetailTypeEnum.SalesItemLineDetail;
+            //line.DetailTypeSpecified = true;
+
+
+
+         
+            //line.AnyIntuitObject = new SalesItemLineDetail()
+            //{
+            //    Qty = 1,
+            //    QtySpecified = true,
+
+            //    AnyIntuitObject = Convert.ToDecimal(10),
+            //    ItemElementName = ItemChoiceType.UnitPrice,
+
+            //    ItemRef = new ReferenceType()
+            //    {
+            //        name = item.Name,
+            //        Value = item.Id
+            //    },
+            //    TaxCodeRef = new ReferenceType()
+            //    {
+            //        name = taxCode.Name,
+            //        Value = taxCode.Id //US has TAX or NON. Global needs actual TaxCode Id
+            //    }
+            //};
+
+      
+
+            //lineList.Add(line);
+            //invoice.Line = lineList.ToArray();
+
+            //invoice.TxnTaxDetail = new TxnTaxDetail()
+            //{
+            //    TotalTax = Convert.ToDecimal(10),
+            //    TotalTaxSpecified = true
+            //};
+
+
+            //invoice.GlobalTaxCalculation = GlobalTaxCalculationEnum.TaxExcluded;
+            //invoice.GlobalTaxCalculationSpecified = true;
+
+            
+
+            //return invoice;
         }
 
 
