@@ -67,6 +67,11 @@
              Provides the retry mechanism for unreliable actions and transient conditions.
             </summary>
         </member>
+        <member name="F:Intuit.Ipp.Retry.IntuitRetryPolicy.context">
+            <summary>
+            The Service Context.
+            </summary>
+        </member>
         <member name="F:Intuit.Ipp.Retry.IntuitRetryPolicy.shouldRetry">
             <summary>
             Delegate that will be invoked whenever a retry condition is encountered.
@@ -107,12 +112,34 @@
             The value which will be used to calculate a random delta in the exponential delay between retries.
             </summary>
         </member>
+        <member name="M:Intuit.Ipp.Retry.IntuitRetryPolicy.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Intuit.Ipp.Retry.IntuitRetryPolicy"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.Retry.IntuitRetryPolicy.#ctor(Intuit.Ipp.Core.ServiceContext,System.Int32,System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Intuit.Ipp.Retry.IntuitRetryPolicy"/> class.
+            </summary>
+            <param name="context">The service context.</param>
+            <param name="retryCount">The number of retry attempts.</param>
+            <param name="retryInterval">The time interval between retries.</param>
+        </member>
         <member name="M:Intuit.Ipp.Retry.IntuitRetryPolicy.#ctor(System.Int32,System.TimeSpan)">
             <summary>
             Initializes a new instance of the <see cref="T:Intuit.Ipp.Retry.IntuitRetryPolicy"/> class.
             </summary>
             <param name="retryCount">The number of retry attempts.</param>
             <param name="retryInterval">The time interval between retries.</param>
+        </member>
+        <member name="M:Intuit.Ipp.Retry.IntuitRetryPolicy.#ctor(Intuit.Ipp.Core.ServiceContext,System.Int32,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Intuit.Ipp.Retry.IntuitRetryPolicy"/> class.
+            </summary>
+            <param name="context">The service context.</param>
+            <param name="retryCount">The number of retry attempts.</param>
+            <param name="initialInterval">The initial interval that will apply for the first retry.</param>
+            <param name="increment">The incremental time value that will be used for calculating the progressive delay between retries.</param>
         </member>
         <member name="M:Intuit.Ipp.Retry.IntuitRetryPolicy.#ctor(System.Int32,System.TimeSpan,System.TimeSpan)">
             <summary>
@@ -121,6 +148,16 @@
             <param name="retryCount">The number of retry attempts.</param>
             <param name="initialInterval">The initial interval that will apply for the first retry.</param>
             <param name="increment">The incremental time value that will be used for calculating the progressive delay between retries.</param>
+        </member>
+        <member name="M:Intuit.Ipp.Retry.IntuitRetryPolicy.#ctor(Intuit.Ipp.Core.ServiceContext,System.Int32,System.TimeSpan,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Intuit.Ipp.Retry.IntuitRetryPolicy"/> class.
+            </summary>
+            <param name="context">The service context.</param>
+            <param name="retryCount">The maximum number of retry attempts.</param>
+            <param name="minBackoff">The minimum back-off time</param>
+            <param name="maxBackoff">The maximum back-off time.</param>
+            <param name="deltaBackoff">The value which will be used to calculate a random delta in the exponential delay between retries.</param>
         </member>
         <member name="M:Intuit.Ipp.Retry.IntuitRetryPolicy.#ctor(System.Int32,System.TimeSpan,System.TimeSpan,System.TimeSpan)">
             <summary>

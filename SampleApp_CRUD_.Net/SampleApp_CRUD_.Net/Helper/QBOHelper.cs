@@ -1615,6 +1615,9 @@ namespace SampleApp_CRUD_DotNet
             
             lineList.Add(line);
             purchaseOrder.Line = lineList.ToArray();
+
+            //purchaseOrder.POStatus = PurchaseOrderStatusEnum.Open;
+            //purchaseOrder.POStatusSpecified = true;
             
             return purchaseOrder;
         }

@@ -13,7 +13,7 @@
         </member>
         <member name="T:Intuit.Ipp.LinqExtender.Abstraction.IBucket">
             <summary>
-            Interfae defining Bucket object and its accesible proeprties.
+            Interface defining Bucket object and its accesible proeprties.
             </summary>
         </member>
         <member name="P:Intuit.Ipp.LinqExtender.Abstraction.IBucket.Name">
