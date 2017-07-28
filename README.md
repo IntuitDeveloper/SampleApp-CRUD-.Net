@@ -1,4 +1,4 @@
-# SampleApp-CRUD-.Net
+# SampleApp-CRUD-.Net for Oauth1 apps
 CRUD sample for V3 .Net SDK (This sample app has NO UI. Please run it in debug mode after enabling logging on Test class to understand how the api calls are made.)
 
 
