@@ -124,6 +124,26 @@
             Gets or sets the num_periods
             </summary>
         </member>
+        <member name="P:Intuit.Ipp.ReportService.ReportService.end_createdate">
+            <summary>
+            Gets or sets the report_date
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.ReportService.ReportService.start_createdate">
+            <summary>
+            Gets or sets the report_date
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.ReportService.ReportService.journal_code">
+            <summary>
+            Gets or sets the report_date
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.ReportService.ReportService.agency_id">
+            <summary>
+            Gets or sets the report_date
+            </summary>
+        </member>
         <member name="P:Intuit.Ipp.ReportService.ReportService.report_date">
             <summary>
             Gets or sets the report_date

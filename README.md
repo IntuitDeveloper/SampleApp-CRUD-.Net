@@ -28,7 +28,7 @@ CRUD sample for V3 .Net SDK (This sample app has NO UI. Please run it in debug m
 
 In order to successfully run this sample app you need a few things:
 
-1. Visual Studio 2015
+1. .Net Framework 4.6.1,  Visual Studio 2015
 2. A [developer.intuit.com](http://developer.intuit.com) account
 3. An app on [developer.intuit.com](http://developer.intuit.com) and the associated app token, consumer key, and consumer secret.
 4. One sandbox company, connect the company with your app and generate the oauth tokens.
