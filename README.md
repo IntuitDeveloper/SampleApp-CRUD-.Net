@@ -1,3 +1,5 @@
+[![Sample Banner](views/Sample.png)][ss1]
+
 # SampleApp-CRUD-.Net for Oauth1 apps
 CRUD sample for V3 .Net SDK (This sample app has NO UI. Please run it in debug mode after enabling logging on Test class to understand how the api calls are made.)
 
@@ -55,4 +57,4 @@ Notes:
 2. Before running AttachableUpload sample, update the path of the pdf that you wish to upload to point to your local directory. 
 
 
-
+[ss1]: https://help.developer.intuit.com/s/samplefeedback?cid=9010&repoName=SampleApp-CRUD-.Net
