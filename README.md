@@ -1,6 +1,6 @@
 [![Sample Banner](views/Sample.png)][ss1]
 
-# SampleApp-CRUD-.Net for Oauth1 apps
+# SampleApp-CRUD-.Net for Oauth1 apps[Since we are migrating all apps to Oauth2, check the CRUD sample app for Oauth2 here- https://github.com/IntuitDeveloper/SampleApp-CRUD_.Net_Oauth2]
 CRUD sample for V3 .Net SDK (This sample app has NO UI. Please run it in debug mode after enabling logging on Test class to understand how the api calls are made.)
 
 
